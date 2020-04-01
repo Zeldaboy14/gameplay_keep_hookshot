@@ -1,4 +1,6 @@
 
+THIS SECTION IS FOR DEBUG ONLY!!!
+
   VROM_ARMS_HOOK	  A_102		    // Arms_Hook is actor 102
   OBJ_GK			  0x0001 // gameplay_keep object number 
 
@@ -26,3 +28,38 @@
 
 	GoTo( VROM_ARMS_HOOK+0x00000BE8 );			//	Hookshot / Longshot Object File
 	Write16( OBJ_GK );
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+THIS SECTION IS FOR 1.0 DECOMPRESSED ONLY!!!
+
+
+  VROM_ARMS_HOOK	  A_102		    // Arms_Hook is actor 102
+  OBJ_GK			  0x0001 // gameplay_keep object number 
+
+
+GoTo( VROM_CODE+0x69DEA );                  //    FPS Right Hand + FPS Hookshot / Longshot
+    Hi32( 0x04063550 );
+    GoTo( VROM_CODE+0x69DEE );
+    Lo32( 0x04063550 );
+
+    GoTo( VROM_CODE+0x6A666 );                  //    Hookshot / Longshot Aiming Reticle
+    Hi32( 0x0405C348 );
+    GoTo( VROM_CODE+0x6A66A );
+    Lo32( 0x0405C348 );
+
+// Arms_Hook
+    GoTo( VROM_ARMS_HOOK+0xA72 );               //    Hookshot / Longshot Spike
+    Hi32( 0x04064058 );
+    GoTo( VROM_ARMS_HOOK+0xA76 );
+    Lo32( 0x04064058 );
+
+    GoTo( VROM_ARMS_HOOK+0xB66 );               //    Hookshot / Longshot Chain
+    Hi32( 0x0405BE60 );
+    GoTo( VROM_ARMS_HOOK+0xB6A );
+    Lo32( 0x0405BE60 );
+
+    GoTo( VROM_ARMS_HOOK+0xBA8 );               //    Hookshot / Longshot Object File
+    Write16( OBJ_GK );
+
