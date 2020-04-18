@@ -40,20 +40,20 @@ THIS SECTION IS FOR 1.0 DECOMPRESSED ONLY!!!
 
 
 GoTo( VROM_CODE+0x69DEA );                  //    FPS Right Hand + FPS Hookshot / Longshot
-    Hi32( 0x04063550 );
+    Hi32( 0x040620D0 );
     GoTo( VROM_CODE+0x69DEE );
-    Lo32( 0x04063550 );
+    Lo32( 0x040620D0 );
 
     GoTo( VROM_CODE+0x6A666 );                  //    Hookshot / Longshot Aiming Reticle
-    Hi32( 0x0405C348 );
+    Hi32( 0x0405C378 );
     GoTo( VROM_CODE+0x6A66A );
-    Lo32( 0x0405C348 );
+    Lo32( 0x0405C378 );
 
 // Arms_Hook
     GoTo( VROM_ARMS_HOOK+0xA72 );               //    Hookshot / Longshot Spike
-    Hi32( 0x04064058 );
+    Hi32( 0x04062B48 );
     GoTo( VROM_ARMS_HOOK+0xA76 );
-    Lo32( 0x04064058 );
+    Lo32( 0x04062B48 );
 
     GoTo( VROM_ARMS_HOOK+0xB66 );               //    Hookshot / Longshot Chain
     Hi32( 0x0405BE60 );
